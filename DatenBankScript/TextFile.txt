@@ -1,0 +1,2 @@
+﻿Add-Migration Identity -Context AppIdentityDbContext
+update-database -Context AppIdentityDbContext

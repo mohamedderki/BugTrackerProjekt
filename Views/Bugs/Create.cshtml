@@ -1,0 +1,56 @@
+﻿@model BugProjektV1.Models.Bug
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Titel" class="control-label"></label>
+                <input asp-for="Titel" class="form-control" />
+                <span asp-validation-for="Titel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Beschreibung" class="control-label"></label>
+                <input asp-for="Beschreibung" class="form-control" />
+                <span asp-validation-for="Beschreibung" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ErfassungDatum" class="control-label">Erfassung Datum</label>
+                <input asp-for="ErfassungDatum" type="date" class="form-control" />
+                <span asp-validation-for="ErfassungDatum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BehebungsDatum" class="control-label">Behebung Datum</label>
+                <input asp-for="BehebungsDatum" type="date" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="TesterId" class="control-label">Tester</label>
+                <select asp-for="TesterId" class ="form-control" asp-items="ViewBag.TesterId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="EntwicklerId" class="control-label">Entwikler</label>
+                <select asp-for="EntwicklerId" class ="form-control" asp-items="ViewBag.EntwicklerId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjektId" class="control-label">Projekt</label>
+                <select asp-for="ProjektId" class ="form-control" asp-items="ViewBag.ProjektId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@*@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@

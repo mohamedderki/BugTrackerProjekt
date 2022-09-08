@@ -1,0 +1,40 @@
+﻿@model BugProjektV1.Models.Projekt
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProjektId" />
+            <div class="form-group">
+                <label asp-for="ProjektName" class="control-label"></label>
+                <input asp-for="ProjektName" class="form-control" />
+                <span asp-validation-for="ProjektName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDatum" class="control-label"></label>
+                <input asp-for="StartDatum" type="date" class="form-control" />
+                <span asp-validation-for="StartDatum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDatum" class="control-label"></label>
+                <input asp-for="EndDatum"  type="date" class="form-control" />
+                
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

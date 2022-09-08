@@ -1,0 +1,52 @@
+﻿@model BudgetsView
+
+ 
+            <!-- Container-fluid starts-->
+            <div class="container-fluid p-3">
+                <div class="row">
+               
+                    <div class="col-xl-4 col-md-6 xl-50">
+                        <div class="card o-hidden  widget-cards">
+                            <div class="bg-secondary card-body">
+                                <div class="media static-top-widget row">
+                                    <div class="icons-widgets col-4">
+                                        <div class="align-self-center text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box font-secondary"><path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z"></path><polyline points="2.32 6.16 12 11 21.68 6.16"></polyline><line x1="12" y1="22.76" x2="12" y2="11"></line></svg></div>
+                                    </div>
+                                    <div class="media-body col-8"><span class="m-0">Projekts</span>
+                                        <h3 class="mb-0"><span class="counter">@Model.PA</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 xl-50">
+                        <div class="card o-hidden widget-cards">
+                            <div class="bg-primary card-body">
+                                <div class="media static-top-widget row">
+                                    <div class="icons-widgets col-4">
+                                        <div class="align-self-center text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square font-primary"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                                    </div>
+                                    <div class="media-body col-8"><span class="m-0">Bugs</span>
+                                        <h3 class="mb-0"><span class="counter">@Model.BA</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 xl-50 ">
+                        <div class="card o-hidden widget-cards">
+                            <div class="bg-danger card-body">
+                                <div class="media static-top-widget row">
+                                    <div class="icons-widgets col-4">
+                                        <div class="align-self-center text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users font-danger"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                                    </div>
+                                    <div class="media-body col-8"><span class="m-0">Mitarbeiter</span>
+                                        <h3 class="mb-0"> <span class="counter">@Model.MA</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <!-- Container-fluid Ends-->

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BugProjektV1.Models.Projekt>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<p>
+    <a asp-action="Create" type="button" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjektName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDatum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDatum)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjektName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDatum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDatum)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProjektId" type="button" class="btn btn-secondary">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProjektId" type="button" class="btn btn-danger">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProjektId" type="button" class="btn btn-primary">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

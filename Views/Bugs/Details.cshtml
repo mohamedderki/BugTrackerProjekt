@@ -1,0 +1,60 @@
+﻿@model BugProjektV1.Models.Bug
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Titel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Titel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Beschreibung)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Beschreibung)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ErfassungDatum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ErfassungDatum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BehebungsDatum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BehebungsDatum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Entwickler)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Entwickler.Bereich)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Projekt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Projekt.ProjektName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tester)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tester.Bereich)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BugId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
